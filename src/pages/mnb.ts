@@ -27,7 +27,7 @@ interface ExchangeRateItem {
 export const getExchangeRatesAPI = async (): Promise<ExchangeRateERP[]> => {
 
   const bank = 'mnb';
-  const echangeRateUrl = `https://cors-anywhere.herokuapp.com/http://api.napiarfolyam.hu?bank=${bank}`;
+  const echangeRateUrl = `http://api.napiarfolyam.hu?bank=${bank}`;
   try {
     const exchangeRateResponse = await axios.get(echangeRateUrl, { headers: {} 
    });
